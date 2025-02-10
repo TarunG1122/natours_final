@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+require('dotenv').config();
+
 
 process.on('uncaughtException',err=>{
     console.log(err.name,err.message);
