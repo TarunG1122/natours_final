@@ -132,8 +132,9 @@
 
 const mongoose = require('mongoose');
 const Booking = require('../models/bookingModel');
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+// const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
+const stripe = require('stripe')('sk_test_51QpFq8CxmqBT54iGGu5XxgjlrZF0t765ZcWhUH7uUWkWCihyFHfCz1owF6NFefDtE7eQKp5CO6QyiGQECE4ABb6M00IEqEYQUu');
 const Tour = require('../models/tourModel');
 const catchAsync = require('../utils/catchAsync');
 const factory = require('./handlerFactory')
