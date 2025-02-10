@@ -133,6 +133,7 @@
 const mongoose = require('mongoose');
 const Booking = require('../models/bookingModel');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+
 const Tour = require('../models/tourModel');
 const catchAsync = require('../utils/catchAsync');
 const factory = require('./handlerFactory')
