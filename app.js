@@ -248,6 +248,8 @@ const viewRouter = require('./routes/viewRoutes');
 const bookingRouter = require('./routes/bookingRoutes');
 const cors = require('cors'); // Enable Cross-Origin Requests
 
+
+
 const app = express();
 
 // Enable CORS
