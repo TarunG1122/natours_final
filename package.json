@@ -4,6 +4,7 @@
   "description": "learn node,express and mongo",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "start:dev": "nodemon server.js",
     "start:prod": "cross-env NODE_ENV=production nodemon server.js",
     "debug": "ndb server.js",
@@ -44,5 +45,8 @@
   },
   "devDependencies": {
     "parcel": "^2.13.3"
+  },
+  "engines": {
+    "node": ">=20.12.2"
   }
 }
