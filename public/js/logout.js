@@ -29,7 +29,7 @@
 
 const logout = async () => {
     try {
-        const url = "http://127.0.0.1:3000/api/v1/users/logout";
+        const url = "/api/v1/users/logout";
         const res = await fetch(url, {
             method: 'GET', // HTTP method
             headers: {

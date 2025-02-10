@@ -247,7 +247,7 @@ const path = require('path');
 const viewRouter = require('./routes/viewRoutes');
 const bookingRouter = require('./routes/bookingRoutes');
 const cors = require('cors'); // Enable Cross-Origin Requests
-
+const compression = require('compression')
 
 
 const app = express();
@@ -334,13 +334,15 @@ app.use(hpp({
   whitelist: ['duration', 'ratingsQuantity', 'ratingsAverage', 'maxGroupSize', 'difficulty', 'price']
 }));
 
+app.use(compression());
+
 // Serving static files
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Middleware to add request time to req object
 app.use((req, res, next) => {
   req.requestTime = new Date().toISOString();
-  console.log(req.cookies);
+  // console.log(req.cookies);
   next();
 });
 
